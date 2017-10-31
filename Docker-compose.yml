@@ -1,0 +1,16 @@
+version: '2'
+services:
+  alumni-service:
+    image : thamira/myapp 
+    restart: always
+    environment:
+    - SPRING_PROFILES_ACTIVE=docker
+    ports: 
+    - 8090:8090
+  alumni-sql:
+    image: mysql:5.7
+    ports:
+    - 33306:3306
+    environment:
+    - MYSQL_ROOT_PASSWORD=susl
+    - MYSQL_DATABASE=dusky-alumni
