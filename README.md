@@ -1,1 +1,2 @@
-# Docker_Ducky
+docker build -t thamira/myapp .
+docker-compose up
